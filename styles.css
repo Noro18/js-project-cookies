@@ -1,0 +1,245 @@
+/* =========================
+   1. RESET / BASE
+   ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+               "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  background: #0f172a;   /* Dark modern background */
+  color: #e5e7eb;
+  min-height: 100vh;
+}
+
+/* =========================
+   2. TYPOGRAPHY
+   ========================= */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: #f9fafb;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.4rem; }
+
+p {
+  margin-bottom: 1rem;
+  color: #cbd5f5;
+}
+
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   3. LAYOUT
+   ========================= */
+
+.container {
+  width: min(1100px, 90%);
+  margin-inline: auto;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   COOKIE BANNER
+   ========================= */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #1e293b;
+  color: #e5e7eb;
+
+  padding: 14px 18px;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border: 1px solid #334155;
+
+  max-width: 90%;
+  z-index: 9999;
+}
+
+/* Text */
+.cookie-banner p {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+/* Button */
+.cookie-banner button {
+  background: #38bdf8;
+  color: #0f172a;
+
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cookie-banner button:hover {
+  background: #0ea5e9;
+}
+
+.cookie-banner button:active {
+  transform: scale(0.96);
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .cookie-banner {
+    flex-direction: column;
+    text-align: center;
+    bottom: 10px;
+  }
+
+  .cookie-banner button {
+    width: 100%;
+  }
+}
+
+
+
+/* =========================
+   4. BUTTONS
+   ========================= */
+
+button,
+.btn {
+  display: inline-block;
+  background: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+  background: #0ea5e9;
+}
+
+button:active,
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Secondary button */
+
+.btn-secondary {
+  background: #334155;
+  color: #e5e7eb;
+}
+
+.btn-secondary:hover {
+  background: #475569;
+}
+
+/* =========================
+   5. FORMS
+   ========================= */
+
+input,
+textarea,
+select {
+  width: 100%;
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #e5e7eb;
+  padding: 0.6rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+/* =========================
+   6. LISTS
+   ========================= */
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+/* =========================
+   7. UTILITIES
+   ========================= */
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+
+.hidden {
+  display: none;
+}
